@@ -54,7 +54,9 @@ while True:
         file_output = input()
         f = open(file_output, 'w')
         sorted_list = gnome_sort(list1)
-        f.write(str(sorted_list))
+        for number in sorted_list:
+            f.write(f"{number} ")
+        #f.write(str(sorted_list))
         f.close()
         print(f"Отсортированный массив:\n{sorted_list}")
     elif mode == "2":
